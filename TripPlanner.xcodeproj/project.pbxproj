@@ -9,29 +9,27 @@
 /* Begin PBXBuildFile section */
 		E8BC7B0E2B8F080F002BF46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BC7B0D2B8F080F002BF46D /* Assets.xcassets */; };
 		E8BC7B112B8F080F002BF46D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BC7B102B8F080F002BF46D /* Preview Assets.xcassets */; };
-		E8BC7B222B8F082D002BF46D /* SemesterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B182B8F082D002BF46D /* SemesterListView.swift */; };
-		E8BC7B232B8F082D002BF46D /* ThemeColorPaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B192B8F082D002BF46D /* ThemeColorPaletteView.swift */; };
-		E8BC7B262B8F082D002BF46D /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B1C2B8F082D002BF46D /* AddClassView.swift */; };
-		E8BC7B2A2B8F082D002BF46D /* SelectSemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B202B8F082D002BF46D /* SelectSemesterView.swift */; };
-		E8BC7B302B8F08D5002BF46D /* CPScheduleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2C2B8F08D5002BF46D /* CPScheduleManager.swift */; };
-		E8BC7B312B8F08D5002BF46D /* CPSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2D2B8F08D5002BF46D /* CPSampleData.swift */; };
-		E8BC7B322B8F08D5002BF46D /* ClassPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2E2B8F08D5002BF46D /* ClassPlannerApp.swift */; };
-		E8BC7B332B8F08D5002BF46D /* CPYearPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2F2B8F08D5002BF46D /* CPYearPlan.swift */; };
+		E8BC7B222B8F082D002BF46D /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B182B8F082D002BF46D /* TripListView.swift */; };
+		E8BC7B262B8F082D002BF46D /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B1C2B8F082D002BF46D /* AddTripView.swift */; };
+		E8BC7B2A2B8F082D002BF46D /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B202B8F082D002BF46D /* SelectDateView.swift */; };
+		E8BC7B302B8F08D5002BF46D /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2C2B8F08D5002BF46D /* TripManager.swift */; };
+		E8BC7B312B8F08D5002BF46D /* TripSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2D2B8F08D5002BF46D /* TripSampleData.swift */; };
+		E8BC7B322B8F08D5002BF46D /* TripPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2E2B8F08D5002BF46D /* TripPlannerApp.swift */; };
+		E8BC7B332B8F08D5002BF46D /* TripPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2F2B8F08D5002BF46D /* TripPlan.swift */; };
 		E8BC7B372B8F09C1002BF46D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B362B8F09C1002BF46D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E8BC7B062B8F080E002BF46D /* ClassPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8BC7B062B8F080E002BF46D /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8BC7B0D2B8F080F002BF46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8BC7B102B8F080F002BF46D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E8BC7B182B8F082D002BF46D /* SemesterListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemesterListView.swift; sourceTree = "<group>"; };
-		E8BC7B192B8F082D002BF46D /* ThemeColorPaletteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeColorPaletteView.swift; sourceTree = "<group>"; };
-		E8BC7B1C2B8F082D002BF46D /* AddClassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
-		E8BC7B202B8F082D002BF46D /* SelectSemesterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSemesterView.swift; sourceTree = "<group>"; };
-		E8BC7B2C2B8F08D5002BF46D /* CPScheduleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPScheduleManager.swift; sourceTree = "<group>"; };
-		E8BC7B2D2B8F08D5002BF46D /* CPSampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPSampleData.swift; sourceTree = "<group>"; };
-		E8BC7B2E2B8F08D5002BF46D /* ClassPlannerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassPlannerApp.swift; sourceTree = "<group>"; };
-		E8BC7B2F2B8F08D5002BF46D /* CPYearPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPYearPlan.swift; sourceTree = "<group>"; };
+		E8BC7B182B8F082D002BF46D /* TripListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
+		E8BC7B1C2B8F082D002BF46D /* AddTripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
+		E8BC7B202B8F082D002BF46D /* SelectDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
+		E8BC7B2C2B8F08D5002BF46D /* TripManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
+		E8BC7B2D2B8F08D5002BF46D /* TripSampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripSampleData.swift; sourceTree = "<group>"; };
+		E8BC7B2E2B8F08D5002BF46D /* TripPlannerApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripPlannerApp.swift; sourceTree = "<group>"; };
+		E8BC7B2F2B8F08D5002BF46D /* TripPlan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripPlan.swift; sourceTree = "<group>"; };
 		E8BC7B362B8F09C1002BF46D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,7 +47,7 @@
 		E8BC7AFD2B8F080E002BF46D = {
 			isa = PBXGroup;
 			children = (
-				E8BC7B082B8F080E002BF46D /* ClassPlanner */,
+				E8BC7B082B8F080E002BF46D /* TripPlanner */,
 				E8BC7B072B8F080E002BF46D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,25 +55,24 @@
 		E8BC7B072B8F080E002BF46D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8BC7B062B8F080E002BF46D /* ClassPlanner.app */,
+				E8BC7B062B8F080E002BF46D /* TripPlanner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8BC7B082B8F080E002BF46D /* ClassPlanner */ = {
+		E8BC7B082B8F080E002BF46D /* TripPlanner */ = {
 			isa = PBXGroup;
 			children = (
 				E8BC7B342B8F08E5002BF46D /* Model */,
-				E8BC7B2E2B8F08D5002BF46D /* ClassPlannerApp.swift */,
+				E8BC7B2E2B8F08D5002BF46D /* TripPlannerApp.swift */,
 				E8BC7B362B8F09C1002BF46D /* ContentView.swift */,
-				E8BC7B1C2B8F082D002BF46D /* AddClassView.swift */,
-				E8BC7B202B8F082D002BF46D /* SelectSemesterView.swift */,
-				E8BC7B182B8F082D002BF46D /* SemesterListView.swift */,
-				E8BC7B192B8F082D002BF46D /* ThemeColorPaletteView.swift */,
+				E8BC7B1C2B8F082D002BF46D /* AddTripView.swift */,
+				E8BC7B202B8F082D002BF46D /* SelectDateView.swift */,
+				E8BC7B182B8F082D002BF46D /* TripListView.swift */,
 				E8BC7B0D2B8F080F002BF46D /* Assets.xcassets */,
 				E8BC7B0F2B8F080F002BF46D /* Preview Content */,
 			);
-			path = ClassPlanner;
+			path = TripPlanner;
 			sourceTree = "<group>";
 		};
 		E8BC7B0F2B8F080F002BF46D /* Preview Content */ = {
@@ -89,9 +86,9 @@
 		E8BC7B342B8F08E5002BF46D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E8BC7B2D2B8F08D5002BF46D /* CPSampleData.swift */,
-				E8BC7B2C2B8F08D5002BF46D /* CPScheduleManager.swift */,
-				E8BC7B2F2B8F08D5002BF46D /* CPYearPlan.swift */,
+				E8BC7B2D2B8F08D5002BF46D /* TripSampleData.swift */,
+				E8BC7B2C2B8F08D5002BF46D /* TripManager.swift */,
+				E8BC7B2F2B8F08D5002BF46D /* TripPlan.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,9 +96,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E8BC7B052B8F080E002BF46D /* ClassPlanner */ = {
+		E8BC7B052B8F080E002BF46D /* TripPlanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8BC7B142B8F080F002BF46D /* Build configuration list for PBXNativeTarget "ClassPlanner" */;
+			buildConfigurationList = E8BC7B142B8F080F002BF46D /* Build configuration list for PBXNativeTarget "TripPlanner" */;
 			buildPhases = (
 				E8BC7B022B8F080E002BF46D /* Sources */,
 				E8BC7B032B8F080E002BF46D /* Frameworks */,
@@ -111,9 +108,9 @@
 			);
 			dependencies = (
 			);
-			name = ClassPlanner;
+			name = TripPlanner;
 			productName = ClassPlanner;
-			productReference = E8BC7B062B8F080E002BF46D /* ClassPlanner.app */;
+			productReference = E8BC7B062B8F080E002BF46D /* TripPlanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E8BC7B012B8F080E002BF46D /* Build configuration list for PBXProject "ClassPlanner" */;
+			buildConfigurationList = E8BC7B012B8F080E002BF46D /* Build configuration list for PBXProject "TripPlanner" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E8BC7B052B8F080E002BF46D /* ClassPlanner */,
+				E8BC7B052B8F080E002BF46D /* TripPlanner */,
 			);
 		};
 /* End PBXProject section */
@@ -166,15 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8BC7B222B8F082D002BF46D /* SemesterListView.swift in Sources */,
-				E8BC7B302B8F08D5002BF46D /* CPScheduleManager.swift in Sources */,
-				E8BC7B2A2B8F082D002BF46D /* SelectSemesterView.swift in Sources */,
-				E8BC7B312B8F08D5002BF46D /* CPSampleData.swift in Sources */,
-				E8BC7B232B8F082D002BF46D /* ThemeColorPaletteView.swift in Sources */,
+				E8BC7B222B8F082D002BF46D /* TripListView.swift in Sources */,
+				E8BC7B302B8F08D5002BF46D /* TripManager.swift in Sources */,
+				E8BC7B2A2B8F082D002BF46D /* SelectDateView.swift in Sources */,
+				E8BC7B312B8F08D5002BF46D /* TripSampleData.swift in Sources */,
 				E8BC7B372B8F09C1002BF46D /* ContentView.swift in Sources */,
-				E8BC7B332B8F08D5002BF46D /* CPYearPlan.swift in Sources */,
-				E8BC7B262B8F082D002BF46D /* AddClassView.swift in Sources */,
-				E8BC7B322B8F08D5002BF46D /* ClassPlannerApp.swift in Sources */,
+				E8BC7B332B8F08D5002BF46D /* TripPlan.swift in Sources */,
+				E8BC7B262B8F082D002BF46D /* AddTripView.swift in Sources */,
+				E8BC7B322B8F08D5002BF46D /* TripPlannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ClassPlanner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripPlanner/Preview Content\"";
 				DEVELOPMENT_TEAM = 2XN7A3Y7GG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -336,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ClassPlanner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripPlanner/Preview Content\"";
 				DEVELOPMENT_TEAM = 2XN7A3Y7GG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -361,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E8BC7B012B8F080E002BF46D /* Build configuration list for PBXProject "ClassPlanner" */ = {
+		E8BC7B012B8F080E002BF46D /* Build configuration list for PBXProject "TripPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8BC7B122B8F080F002BF46D /* Debug */,
@@ -370,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8BC7B142B8F080F002BF46D /* Build configuration list for PBXNativeTarget "ClassPlanner" */ = {
+		E8BC7B142B8F080F002BF46D /* Build configuration list for PBXNativeTarget "TripPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E8BC7B152B8F080F002BF46D /* Debug */,
