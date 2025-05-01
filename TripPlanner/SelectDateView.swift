@@ -26,44 +26,30 @@ struct SelectDateView: View {
             }
             .navigationTitle("Select Date")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: toolbarItems)
+            .toolbar { toolbarItems() }
             .listStyle(.insetGrouped)
         }
     }
 
-    // MARK: – Subviews to ease type-checking
-
+    // MARK: – Choose existing date
     private var dateSelectionSection: some View {
-        // 1) Bind plan.dates to a simple local constant
-        let days = plan.dates
-        
-        return Section("Choose a Date") {
-            // 2) Iterate that local array
-            ForEach(days, id: \.id) { day in
-                dateRow(for: day)
+        Section("Choose a Date") {
+            ForEach(plan.dates, id: \.id) { day in
+                HStack {
+                    Text(day.date)
+                    Spacer()
+                    if day.id == selectedDate?.id {
+                        Image(systemName: "checkmark")
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture { selectedDate = day }
             }
         }
     }
 
-    // 3) Pull the row into its own function to simplify the closure
-    private func dateRow(for day: EachDay) -> some View {
-        HStack {
-            Text(day.date)
-            Spacer()
-            if day == selectedDate {
-                Image(systemName: "checkmark")
-                    .foregroundColor(.accentColor)
-            }
-        }
-        .contentShape(Rectangle())
-        .onTapGesture {
-            selectedDate = day
-        }
-    }
-
-
-
-
+    // MARK: – Add a new date
     private var addDateSection: some View {
         Section("Or Add a New Date") {
             HStack {
@@ -72,10 +58,11 @@ struct SelectDateView: View {
 
                 Button("Add Date") {
                     let trimmed = newDateString.trimmingCharacters(in: .whitespaces)
+                    // ensure it's nonempty and not already present
                     guard !trimmed.isEmpty,
-                          !plan.hasDay(for: trimmed)
+                          !plan.dates.contains(where: { $0.date == trimmed })
                     else { return }
-                    // note: `activities` not `classes`
+
                     let newDay = EachDay(date: trimmed, activities: [])
                     plan.dates.append(newDay)
                     selectedDate = newDay
@@ -86,20 +73,19 @@ struct SelectDateView: View {
         }
     }
 
+    // MARK: – Toolbar buttons
     @ToolbarContentBuilder
     private func toolbarItems() -> some ToolbarContent {
         ToolbarItem(placement: .topBarLeading) {
             Button("Cancel") { dismiss() }
         }
-        if selectedDate != nil {
+
+        // Only show "Add Activity" if a date is selected
+        if let day = selectedDate,
+           let idx = plan.dates.firstIndex(where: { $0.id == day.id }) {
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Add Activity") {
-                    // append into the `activities` array
-                    if let day = selectedDate,
-                       let idx = plan.dates.firstIndex(of: day)
-                    {
-                        plan.dates[idx].activities.append(newActivity)
-                    }
+                    plan.dates[idx].activities.append(newActivity)
                     dismissParentView()
                     dismiss()
                 }
@@ -110,29 +96,19 @@ struct SelectDateView: View {
     }
 }
 
-// Simple state‐to‐binding wrapper for previews:
-struct StatefulPreviewWrapper<Value, Content: View>: View {
-    @State var value: Value
-    var content: (Binding<Value>) -> Content
-    var body: some View { content($value) }
-}
-
 struct SelectDateView_Previews: PreviewProvider {
+    @State static var samplePlan = TripSampleData.tripPlans[0]
+
     static var previews: some View {
-        StatefulPreviewWrapper(
-            value: TripSampleData.tripPlans[0]
-        ) { bindingPlan in
-            SelectDateView(
-                newActivity: Activity(
-                    time: "13:30",
-                    activityName: "Sample Shuttle",
-                    location: "Hotel Balmoral",
-                    alreadyTaken: false
-                ),
-                plan: bindingPlan,
-                dismissParentView: {}
-            )
-        }
+        SelectDateView(
+            newActivity: Activity(
+                time: "13:30",
+                activityName: "Sample Shuttle",
+                location: "Hotel Balmoral",
+                alreadyTaken: false
+            ),
+            plan: $samplePlan,
+            dismissParentView: {}
+        )
     }
 }
-

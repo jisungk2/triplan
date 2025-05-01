@@ -1,68 +1,52 @@
-//
-//  CPYearPlan.swift
-//  ClassPlannerFinished
-//
-//  Created by Justin Wong on 2/23/24.
-//
-
 import Foundation
 
-class TripPlan: Identifiable {
+/// A single trip, composed of a destination and a list of days
+struct TripPlan: Identifiable {
     let id = UUID()
     var destination: String
     var dates: [EachDay]
-    
+
     init(destination: String, dates: [EachDay]) {
         self.destination = destination
         self.dates = dates
     }
-    
-    func hasDay(for date: String) -> Bool {
-        // TODO: 3A. IMPLEMENT USING A CLOSURE
-        for day in dates {
-            if day.date == date {
-                return true
+
+    /// Flatten every activity into one comma‐separated string
+    func getAllActivitiesString() -> String {
+        destination + ": " +
+        dates
+          .flatMap { day in
+            day.activities.map { activity in
+              "\(day.date) \(activity.time) \(activity.activityName) \(activity.location)"
             }
-        }
-        return false
-    }
-    
-    func getDay(for date: String) -> EachDay? {
-        // TODO: 3B. IMPLEMENT USING A CLOSURE
-        for day in dates {
-            if day.date == date {
-                return day
-            }
-        }
-        return nil
+          }
+          .joined(separator: ", ")
     }
 }
 
-class EachDay: Identifiable, Equatable {
-    static func == (lhs: EachDay, rhs: EachDay) -> Bool {
-        lhs.id == rhs.id
-    }
-    
-    var id = UUID()
+/// One calendar day within a trip, with its list of activities
+struct EachDay: Identifiable {
+    let id = UUID()
     var date: String
     var activities: [Activity]
-    
-    init(id: UUID = UUID(), date: String, activities: [Activity]) {
-        self.id = id
+
+    init(date: String, activities: [Activity]) {
         self.date = date
         self.activities = activities
     }
+
+    // Equatable is synthesized, comparing id, date, activities
 }
 
-class Activity: Identifiable {
-    var id = UUID()
+/// A single scheduled thing to do
+struct Activity: Identifiable {
+    let id = UUID()
     var time: String
     var activityName: String
     var location: String
     var alreadyTaken: Bool
-    
-    init(id: UUID = UUID(), time: String, activityName: String, location: String, alreadyTaken: Bool) {
-        self.id = id
+
+    init(time: String, activityName: String, location: String, alreadyTaken: Bool) {
         self.time = time
         self.activityName = activityName
         self.location = location

@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9B26CED2DC32AC400BA9CD6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D9B26CEC2DC32AC400BA9CD6 /* Alamofire */; };
 		E8BC7B0E2B8F080F002BF46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BC7B0D2B8F080F002BF46D /* Assets.xcassets */; };
 		E8BC7B112B8F080F002BF46D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BC7B102B8F080F002BF46D /* Preview Assets.xcassets */; };
-		E8BC7B222B8F082D002BF46D /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B182B8F082D002BF46D /* TripListView.swift */; };
 		E8BC7B262B8F082D002BF46D /* AddTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B1C2B8F082D002BF46D /* AddTripView.swift */; };
 		E8BC7B2A2B8F082D002BF46D /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B202B8F082D002BF46D /* SelectDateView.swift */; };
 		E8BC7B302B8F08D5002BF46D /* TripManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BC7B2C2B8F08D5002BF46D /* TripManager.swift */; };
@@ -23,7 +23,6 @@
 		E8BC7B062B8F080E002BF46D /* TripPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8BC7B0D2B8F080F002BF46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8BC7B102B8F080F002BF46D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E8BC7B182B8F082D002BF46D /* TripListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		E8BC7B1C2B8F082D002BF46D /* AddTripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTripView.swift; sourceTree = "<group>"; };
 		E8BC7B202B8F082D002BF46D /* SelectDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
 		E8BC7B2C2B8F08D5002BF46D /* TripManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripManager.swift; sourceTree = "<group>"; };
@@ -33,11 +32,16 @@
 		E8BC7B362B8F09C1002BF46D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D9F3F4112DC3180700DB648C /* ChatGPT */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ChatGPT; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		E8BC7B032B8F080E002BF46D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B26CED2DC32AC400BA9CD6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +67,12 @@
 		E8BC7B082B8F080E002BF46D /* TripPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				D9F3F4112DC3180700DB648C /* ChatGPT */,
 				E8BC7B342B8F08E5002BF46D /* Model */,
 				E8BC7B2E2B8F08D5002BF46D /* TripPlannerApp.swift */,
 				E8BC7B362B8F09C1002BF46D /* ContentView.swift */,
 				E8BC7B1C2B8F082D002BF46D /* AddTripView.swift */,
 				E8BC7B202B8F082D002BF46D /* SelectDateView.swift */,
-				E8BC7B182B8F082D002BF46D /* TripListView.swift */,
 				E8BC7B0D2B8F080F002BF46D /* Assets.xcassets */,
 				E8BC7B0F2B8F080F002BF46D /* Preview Content */,
 			);
@@ -108,6 +112,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				D9F3F4112DC3180700DB648C /* ChatGPT */,
+			);
 			name = TripPlanner;
 			productName = ClassPlanner;
 			productReference = E8BC7B062B8F080E002BF46D /* TripPlanner.app */;
@@ -137,6 +144,9 @@
 				Base,
 			);
 			mainGroup = E8BC7AFD2B8F080E002BF46D;
+			packageReferences = (
+				D9B26CEB2DC32AC400BA9CD6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E8BC7B072B8F080E002BF46D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,7 +173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8BC7B222B8F082D002BF46D /* TripListView.swift in Sources */,
 				E8BC7B302B8F08D5002BF46D /* TripManager.swift in Sources */,
 				E8BC7B2A2B8F082D002BF46D /* SelectDateView.swift in Sources */,
 				E8BC7B312B8F08D5002BF46D /* TripSampleData.swift in Sources */,
@@ -376,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D9B26CEB2DC32AC400BA9CD6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9B26CEC2DC32AC400BA9CD6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9B26CEB2DC32AC400BA9CD6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8BC7AFE2B8F080E002BF46D /* Project object */;
 }
